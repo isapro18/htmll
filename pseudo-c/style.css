@@ -1,0 +1,357 @@
+:root {
+  --color-primario: #02007a;
+  --color-acento: #7800a8;
+  --color-secundario: #f4f4f4;
+  --color-fondo: #ffffff;
+  --color-texto: #222222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 60px;
+}
+
+nav.menu-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-primario);
+  padding: 12px 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.menu-principal ul {
+  list-style: none;
+}
+
+nav.menu-principal li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav.menu-principal a {
+  text-decoration: none;
+  color: var(--color-fondo);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav.menu-principal a:hover {
+  color: var(--color-acento);
+}
+
+nav.menu-principal a::before {
+  content: "🧩";
+  font-size: 0.8em;
+  margin-right: 4px;
+}
+
+.card-centrada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto 40px;
+  width: 80%;
+  max-width: 600px;
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-primario);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contenedor-cajas {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+.caja {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caja-roja {
+  background-color: crimson;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.caja-verde {
+  background-color: seagreen;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+}
+
+.imagen-decorativa img {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.campo-icono {
+  position: relative;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.campo-icono input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.campo-icono::before {
+  content: "🔍";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+  pointer-events: none;
+}
+
+.campo-icono input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+}
+
+form.formulario {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-primario);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--color-primario);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border: 2px solid var(--color-acento);
+  background-color: #e6fff2;
+}
+
+input:invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+input[type="email"] {
+  background-color: #d9f9e6;
+  border: 2px solid var(--color-primario);
+}
+
+input[type="email"]:only-of-type {
+  border: 2px dashed var(--color-acento);
+  color: darkgreen;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: var(--color-acento);
+}
+
+.envolvente:has(input[type="checkbox"]:checked) {
+  background-color: #d0f0e0;
+  border: 2px solid green;
+}
+
+button {
+  background-color: var(--color-primario);
+  color: white;
+  border: 2px solid var(--color-primario);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 3s ease, color 3s ease, border 3s ease;
+}
+
+button:hover {
+  background-color: #000;
+  color: #ccc;
+  border-color: #cc0000;
+  transform: scale(1.05);
+  transition: background-color 8s ease, color 8s ease, border 8s ease;
+}
+
+.btn-sombra {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn-sombra::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: -6px;
+  width: 80%;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.info {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 20px auto;
+  width: 90%;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.info::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  margin-top: 8px;
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
+}
+
+.tarjeta {
+  position: relative;
+  width: 250px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-primario);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.btn-eliminar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  line-height: 32px;
+  padding: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #cc0000;
+  transform: scale(1.1);
+}
+
+h1, h2, h3, h4, h5, h6,
+p, legend, .info, .cita-academica {
+  text-align: center;
+}
+
+button,
+.btn-sombra,
+.btn-eliminar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"] {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.form-group input[type="checkbox"] {
+  margin-top: 10px;
+  transform: scale(1.2);
+  accent-color: var(--color-acento);
+}

@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Académico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="modo-oscuro">
+
+  <!-- Navegación principal -->
+  <nav class="menu-principal">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#acerca">Acerca de</a></li>
+    </ul>
+  </nav>
+
+  <!-- Tarjeta informativa centrada -->
+  <section class="card-centrada">
+    <h2>Tarjeta Informativa</h2>
+    <p> mañana hay clase virtual</p>
+  </section>
+
+  <!-- Cajas decorativas -->
+  <section class="contenedor-cajas">
+    <div class="caja caja-roja">Caja Atrás</div>
+    <div class="caja caja-verde">Caja Adelante</div>
+  </section>
+
+  <!-- Imagen decorativa y campo de búsqueda -->
+  <section class="envolvente">
+    <figure class="imagen-decorativa">
+      <img src="channels4_profile.jpg" alt="Descripción académica">
+    </figure>
+
+    <div class="campo-icono">
+      <input type="text" aria-label="Buscar contenido" placeholder="Buscar...">
+    </div>
+
+    <!-- Formulario académico -->
+    <form action="#" class="formulario">
+      <fieldset>
+        <legend>Registro de Datos</legend>
+
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nacimiento">Fecha de nacimiento:</label>
+          <input type="date" id="nacimiento" name="nacimiento" required>
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="guardar">¿Guardar datos?</label>
+          <input type="checkbox" id="guardar" name="guardar">
+        </div>
+
+        <button type="submit">Validar</button>
+      </fieldset>
+
+      <!-- Información adicional -->
+      <div class="info-extra">
+        <p class="info">Este formulario permite registrar datos básicos.</p>
+        <p class="info">Todos los campos son obligatorios, excepto la opción de guardar datos.</p>
+        <p class="info">La información será tratada conforme a las políticas de privacidad.</p>
+
+        <button type="button" class="btn-sombra">Más información</button>
+
+        <blockquote class="cita-academica">
+          “La tecnología por sí sola no basta. También tenemos que poner el corazón.”
+        </blockquote>
+      </div>
+    </form>
+
+    <!-- Tarjeta con botón eliminar -->
+    <div class="tarjeta">
+      <button type="button" class="btn-eliminar" aria-label="Eliminar">✖</button>
+      <p>Esto es un texto.</p>
+    </div>
+  </section>
+
+</body>
+</html>
